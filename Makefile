@@ -7,8 +7,8 @@ clean:
 	rm -f net/library/jiga/*.class
 
 FrozenBubble.class class:
-	gcj-4.4 -encoding ISO-8859-1 -source 1.2 -target 1.1 *.java
-	gcj-4.4 -encoding ISO-8859-1 -source 1.2 -target 1.1 net/library/jiga/*.java
+	javac -encoding ISO-8859-1 -source 1.2 -target 1.1 *.java
+	javac -encoding ISO-8859-1 -source 1.2 -target 1.1 net/library/jiga/*.java
 
 frozenBubble.jar jar: FrozenBubble.class
 	jar cvfm frozenBubble.jar manifest.mf *.txt *.gif *.jpg *.au *.class net/library/jiga/*.class
